@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgb(175, 235, 219), rgb(2, 95, 92));
+    padding: 12px;
+    text-align: left;
+    align-items: center;
+}
+
+.to-do-app{
+    background-color: rgb(227, 243, 242);
+    width: 100%;
+    max-width: 648px;
+    font-size: 22px;
+    margin: 56px auto 20px;
+    padding: 30px 30px 100px;
+    border-radius: 10px;
+}
+
+.to-do-app h2{
+    margin-bottom: 20px;
+}
+
+.to-do-app input {
+    font-size: 22px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:#9beedb;
+    border-radius: 10px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    height: 60px;
+}
+
+.row input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+.row button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    color: white;
+    background-color: rgb(2, 117, 106);
+    height: 60px;
+    border-radius: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+ul li {
+    text-align: left;
+    list-style-type: none;
+    cursor: pointer;
+    padding: 11px 60px;
+    background-color: rgb(227, 243, 242);
+    font-size: 22px;
+    user-select: none;
+    position: relative;
+}
+
+ul li:hover{
+    background-color: #9beedb;
+}
+
+/*Add a "checked" mark when clicked on */
+ul li::before {
+    content: '';
+    position: absolute;
+    border-radius: 10%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(uncheck.png);
+    top: 10px;
+    left: 16px;
+    /* transform: rotate(45deg); */
+    height: 24px;
+    width: 26px;
+}
+
+ul li.checked {
+    background: #9beedb;
+    color: #0f0f0f;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(checked.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 42px;
+    height: 40px;
+    font-size: 22px;
+    color: #0f0f0f;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul li span:hover{
+    background-color: rgb(2, 117, 106); 
+    border-radius: 50%;
+}
